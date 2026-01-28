@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Es. 30 - Soglia"/>
+        <attribute name="authors" value="amird"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-17 09:48:12 "/>
+        <attribute name="created" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNC0xNzsiMDk6MjY6MTcgIjsyODMy"/>
+        <attribute name="edited" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNC0xNzsiMDk6NDg6MTIgIjsxOzI5Mzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="k, n, i, v, r" type="Integer" array="False" size=""/>
+            <comment text="k = numero da confrontare&#13;&#10;n = numero di confronti&#13;&#10;i = contatore ripetizioni&#13;&#10;v = singolo valore da confrontare con k&#13;&#10;r = numero di valori v maggiori di k"/>
+            <assign variable="r" expression="0"/>
+            <output expression="&quot;Inserire il numero da confrontare:&quot;" newline="True"/>
+            <input variable="k"/>
+            <output expression="&quot;Inserire il mumero dei valori da confrontare:&quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <output expression="&quot;Inserire il &quot; &amp;i&amp; &quot;&#176; valore:&quot;" newline="True"/>
+                <input variable="v"/>
+                <if expression="v&gt;k">
+                    <then>
+                        <assign variable="r" expression="r+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Ci sono &quot; &amp;r&amp; &quot; valori maggiori di &quot; &amp;k" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

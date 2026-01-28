@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Es. 25 - Biglietti"/>
+        <attribute name="authors" value="amird"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-03 10:41:15 "/>
+        <attribute name="created" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNC0wMzsiMDQ6NTM6MDcgIjsyODIx"/>
+        <attribute name="edited" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNC0wMzsiMTA6NDE6MTUgIjsyOzI5MjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="T, O" type="String" array="False" size=""/>
+            <declare name="C" type="Real" array="False" size=""/>
+            <declare name="Z, S" type="Integer" array="False" size=""/>
+            <output expression="&quot;Seleziona un tipo di abbonamento:&quot;" newline="True"/>
+            <output expression="&quot;(S)ettimanale, (M)ensile o (A)nnuale.&quot;" newline="True"/>
+            <input variable="T"/>
+            <if expression="T!=&quot;S&quot; and T!=&quot;M&quot; and T!=&quot;A&quot;">
+                <then>
+                    <output expression="&quot;&#9888;&#65039; ERRORE NELL'ASSEGNAZIONE DEL TIPO DI ABBONAMENTO.&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Seleziona una zona di copertura dell'abbonamento:&quot;" newline="True"/>
+            <output expression="&quot;1=Zona centrale, 2=Zona periferica, 3=Entrambe&quot;" newline="True"/>
+            <input variable="Z"/>
+            <if expression="Z&lt;1 or Z&gt;3">
+                <then>
+                    <output expression="&quot;&#9888;&#65039; ERRORE NELL'ASSEGNAZIONE DELLA ZONA DI COPERTURA.&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Vuoi ricevere uno sconto del 20% per un abbonamento che non consente di viaggiare nelle ore di punta?&quot;" newline="True"/>
+            <output expression="&quot;S o N&quot;" newline="True"/>
+            <input variable="O"/>
+            <if expression="O=&quot;S&quot;">
+                <then>
+                    <assign variable="S" expression="80"/>
+                </then>
+                <else>
+                    <if expression="O=&quot;N&quot;">
+                        <then>
+                            <assign variable="S" expression="100"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;&#9888;&#65039; ERRORE NELL'ASSEGNAZIONE DELLO SCONTO.&quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="T==&quot;S&quot;">
+                <then>
+                    <if expression="Z==1">
+                        <then>
+                            <assign variable="C" expression="10/100*S"/>
+                        </then>
+                        <else>
+                            <if expression="Z==2">
+                                <then>
+                                    <assign variable="C" expression="5/100*S"/>
+                                </then>
+                                <else>
+                                    <assign variable="C" expression="15/100*S"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="T==&quot;M&quot;">
+                        <then>
+                            <if expression="Z==1">
+                                <then>
+                                    <assign variable="C" expression="30/100*S"/>
+                                </then>
+                                <else>
+                                    <if expression="Z==2">
+                                        <then>
+                                            <assign variable="C" expression="20/100*S"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="C" expression="40/100*S"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="Z==1">
+                                <then>
+                                    <assign variable="C" expression="250/100*S"/>
+                                </then>
+                                <else>
+                                    <if expression="Z==2">
+                                        <then>
+                                            <assign variable="C" expression="150/100*S"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="C" expression="300/100*S"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Il prezzo del tuo biglietto &#232; &#8364;&quot; &amp; C &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

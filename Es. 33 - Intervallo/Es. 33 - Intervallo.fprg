@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Es. 33 - Intervallo"/>
+        <attribute name="authors" value="amird"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-18 05:56:18 "/>
+        <attribute name="created" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNS0xODsiMDU6NDM6MTggIjsyODMw"/>
+        <attribute name="edited" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNS0xODsiMDU6NTY6MTggIjsxOzI5NDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="h, k, n, i, c, j" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="c" expression="0"/>
+            <output expression="&quot;Inserisci il valore minimo&quot;" newline="True"/>
+            <input variable="h"/>
+            <output expression="&quot;Inserisci il valore massimo&quot;" newline="True"/>
+            <input variable="k"/>
+            <output expression="&quot;Inserire quanti valori confrontare&quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <output expression="&quot;Inserisci il &quot; &amp; i &amp; &quot;&#176; numero&quot;" newline="True"/>
+                <input variable="j"/>
+                <if expression="j&gt;=h and j&lt;=k">
+                    <then>
+                        <assign variable="c" expression="c+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Spono stati inseriti &quot; &amp; c &amp; &quot; numeri compresi tra &quot; &amp; h &amp; &quot; e &quot; &amp; k" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

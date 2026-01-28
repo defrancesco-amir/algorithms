@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Quadrato di binmomi semplici"/>
+        <attribute name="authors" value="studente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-16 12:43:39 "/>
+        <attribute name="created" value="c3R1ZGVudGU7TDIxN1BDMjU7MjAyNS0wNS0xNjsiMTI6MjQ6NTQgIjsyNTUw"/>
+        <attribute name="edited" value="c3R1ZGVudGU7TDIxN1BDMjU7MjAyNS0wNS0xNjsiMTI6NDM6MzkgIjszOzI2NjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, c, d, f" type="Integer" array="False" size=""/>
+            <declare name="b, e" type="String" array="False" size=""/>
+            <output expression="&quot;(A*b^c + D*e^f)^2&quot;" newline="True"/>
+            <output expression="&quot;Inserisci i numeri/lettere per l'espressione nell'ordine&quot;" newline="True"/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <input variable="d"/>
+            <input variable="e"/>
+            <input variable="f"/>
+            <output expression="a*a &amp; b &amp; &quot;^&quot; &amp; c*2 &amp;&quot;+&quot;&amp; d*d &amp; e &amp; &quot;^&quot; &amp; f*2 &amp;&quot;+&quot;&amp; 2*a*d &amp; b &amp; &quot;^&quot; &amp; c &amp; &quot;*&quot; &amp; e &amp; &quot;^&quot; &amp; f" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

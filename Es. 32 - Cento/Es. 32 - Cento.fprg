@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Es. 32 - Cento"/>
+        <attribute name="authors" value="amird"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-18 05:42:27 "/>
+        <attribute name="created" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNS0xODsiMDU6MzM6NDcgIjsyODMx"/>
+        <attribute name="edited" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNS0xODsiMDU6NDI6MjcgIjsxOzI5Mzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, s" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="0"/>
+            <assign variable="s" expression="0"/>
+            <do expression="s&lt;100">
+                <input variable="i"/>
+                <assign variable="n" expression="n+1"/>
+                <assign variable="s" expression="s+i"/>
+            </do>
+            <output expression="&quot;Sono stati inseriti &quot; &amp; n &amp; &quot; numeri e la loro somma totale &#232; &quot; &amp; s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="16. Inverso"/>
+        <attribute name="authors" value="amird"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-10 03:19:21 "/>
+        <attribute name="created" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wMy0xMDsiMDM6MTI6NDEgIjsyODEw"/>
+        <attribute name="edited" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wMy0xMDsiMDM6MTk6MjEgIjsxOzI5MjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Real" array="False" size=""/>
+            <input variable="x"/>
+            <if expression="x==0">
+                <then>
+                    <output expression="&quot;E R R O R E&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Il risultato &#232; &quot; &amp; 1/x" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

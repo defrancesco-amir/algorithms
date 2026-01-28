@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="VERIFICA ES. 1 - pari o dispari"/>
+        <attribute name="authors" value="studente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-16 12:02:39 "/>
+        <attribute name="created" value="c3R1ZGVudGU7TDIxN1BDMjU7MjAyNS0wNS0xNjsiMTE6NTc6NDkgIjsyNTU5"/>
+        <attribute name="edited" value="c3R1ZGVudGU7TDIxN1BDMjU7MjAyNS0wNS0xNjsiMTI6MDI6MzkgIjsxOzI2NTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <output expression="&quot;Inserire il numero:&quot;" newline="True"/>
+            <input variable="x"/>
+            <if expression="x%2==0">
+                <then>
+                    <output expression="&quot;Il numero &#232; pari&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Il numero &#232; dispari&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

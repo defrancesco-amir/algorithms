@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="VERIFICA ES. 2 - prezzo magliette"/>
+        <attribute name="authors" value="studente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-16 12:07:34 "/>
+        <attribute name="created" value="c3R1ZGVudGU7TDIxN1BDMjU7MjAyNS0wNS0xNjsiMTI6MDM6MDUgIjsyNTQz"/>
+        <attribute name="edited" value="c3R1ZGVudGU7TDIxN1BDMjU7MjAyNS0wNS0xNjsiMTI6MDc6MzQgIjsxOzI2NTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Inserire il numero di t-shirt richieste:&quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="n&gt;5">
+                <then>
+                    <output expression="&quot;Il prezzo &#232; di &#8364;&quot; &amp; 90/100*(n*40)" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Il prezzo &#232; di &#8364;&quot; &amp; n*40" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

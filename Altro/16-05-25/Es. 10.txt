@@ -1,0 +1,16 @@
+i = 0
+neg = 0
+pos = 0
+while i < 10 do
+  if v[i] < 0
+    neg = neg + 1
+  else
+    if v[i] > 0
+      pos = pos + 1
+    end if
+  end if
+  i = i + 1
+end while
+if neg > pos then
+  output "molti negativi"
+end if

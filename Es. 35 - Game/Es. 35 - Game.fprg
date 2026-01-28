@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Es. 35 - Game"/>
+        <attribute name="authors" value="amird"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-18 06:18:36 "/>
+        <attribute name="created" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNS0xODsiMDY6MDQ6MDQgIjsyODIz"/>
+        <attribute name="edited" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNS0xODsiMDY6MTg6MzYgIjsxOzI5NDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, g" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="indovinato" type="Boolean" array="False" size=""/>
+            <assign variable="indovinato" expression="false"/>
+            <output expression="&quot;GIOCATORE 1: Scrivi la lettera da indovinare&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;GIOCATORE 2: Hai 5 tentativi per indovinare la lettera inserita&quot;" newline="True"/>
+            <for variable="i" start="1" end="5" direction="inc" step="1">
+                <if expression="indovinato">
+                    <then/>
+                    <else>
+                        <output expression="i &amp; &quot;&#176; tentativo:&quot;" newline="True"/>
+                        <input variable="g"/>
+                        <if expression="g==n">
+                            <then>
+                                <output expression="&quot;&#9745;&#65039; INDOVINATO!&quot;" newline="True"/>
+                                <assign variable="indovinato" expression="true"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;&#10062; SBAGLIATO!&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <if expression="indovinato">
+                <then/>
+                <else>
+                    <output expression="&quot;Tentativi finiti. GAME OVER.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Es. 21 - TipoTriangolo"/>
+        <attribute name="authors" value="studente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-21 12:53:32 "/>
+        <attribute name="created" value="c3R1ZGVudGU7TDIxN1BDMDc7MjAyNS0wMy0yMTsiMTI6MjE6MDQgIjsyNTM2"/>
+        <attribute name="edited" value="c3R1ZGVudGU7TDIxN1BDMDc7MjAyNS0wMy0yMTsiMTI6NTM6MzIgIjsyOzI2NTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Real" array="False" size=""/>
+            <output expression="&quot;1&#176; lato:&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;2&#176; lato:&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;3&#176; lato:&quot;" newline="True"/>
+            <input variable="c"/>
+            <if expression="a==b">
+                <then>
+                    <if expression="b==c">
+                        <then>
+                            <output expression="&quot;Il triangolo &#232; equilatero&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Il triangolo &#232; isoscele&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="b==c">
+                        <then>
+                            <output expression="&quot;Il triangolo &#232; isoscele&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="a==c">
+                                <then>
+                                    <output expression="&quot;Il triangolo &#232; isoscele&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Il triangolo &#232; scaleno&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

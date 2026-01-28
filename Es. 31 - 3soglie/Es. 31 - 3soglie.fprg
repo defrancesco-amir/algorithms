@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Es. 30 - Soglia"/>
+        <attribute name="authors" value="amird"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-18 05:32:24 "/>
+        <attribute name="created" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNC0xNzsiMDk6MjY6MTcgIjsyODMy"/>
+        <attribute name="edited" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNS0xODsiMDU6MzI6MjQgIjsyOzI5MzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="k, n, i, v, mag, min, uguali" type="Integer" array="False" size=""/>
+            <comment text="k = numero da confrontare&#13;&#10;n = numero di confronti&#13;&#10;i = contatore ripetizioni&#13;&#10;v = singolo valore da confrontare con k&#13;&#10;mag = numero di valori v maggiori di k&#13;&#10;min = numero di valori v minori di k&#13;&#10;uguali = numero di valori v uguali a k"/>
+            <assign variable="mag" expression="0"/>
+            <assign variable="min" expression="0"/>
+            <assign variable="uguali" expression="0"/>
+            <output expression="&quot;Inserire il numero da confrontare:&quot;" newline="True"/>
+            <input variable="k"/>
+            <output expression="&quot;Inserire il mumero dei valori da confrontare:&quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <output expression="&quot;Inserire il &quot; &amp;i&amp; &quot;&#176; valore:&quot;" newline="True"/>
+                <input variable="v"/>
+                <if expression="v&gt;k">
+                    <then>
+                        <assign variable="mag" expression="mag+1"/>
+                    </then>
+                    <else>
+                        <if expression="v&lt;k">
+                            <then>
+                                <assign variable="min" expression="min+1"/>
+                            </then>
+                            <else>
+                                <assign variable="uguali" expression="uguali+1"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Hai inserito &quot; &amp; mag &amp; &quot; valori maggiori, &quot; &amp; min &amp; &quot; valori minori e &quot; &amp; uguali &amp; &quot; valori uguali a &quot; &amp; k" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

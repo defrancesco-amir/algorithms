@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Es. 34 - forDispari"/>
+        <attribute name="authors" value="amird"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-18 06:03:16 "/>
+        <attribute name="created" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNS0xODsiMDU6NTc6MDggIjsyODM0"/>
+        <attribute name="edited" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNS0xODsiMDY6MDM6MTYgIjsxOzI5MzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <if expression="n%2==0">
+                <then>
+                    <comment text="&quot;Trasforma il numero pari in dispari&quot; ??"/>
+                    <assign variable="n" expression="n+1"/>
+                </then>
+                <else/>
+            </if>
+            <for variable="i" start="1" end="200" direction="inc" step="1">
+                <assign variable="n" expression="n+2"/>
+                <output expression="n" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

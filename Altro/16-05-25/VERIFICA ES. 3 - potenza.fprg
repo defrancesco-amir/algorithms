@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="VERIFICA ES. 3 - potenza"/>
+        <attribute name="authors" value="studente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-16 12:23:05 "/>
+        <attribute name="created" value="c3R1ZGVudGU7TDIxN1BDMjU7MjAyNS0wNS0xNjsiMTI6MDg6MDMgIjsyNTQ2"/>
+        <attribute name="edited" value="c3R1ZGVudGU7TDIxN1BDMjU7MjAyNS0wNS0xNjsiMTI6MjM6MDUgIjsxOzI2NTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="e, b, p" type="Real" array="False" size=""/>
+            <output expression="&quot;Inserisci la base della potenza:&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Inserisci l'esponente della potenza:&quot;" newline="True"/>
+            <input variable="e"/>
+            <if expression="e&gt;0">
+                <then>
+                    <assign variable="p" expression="b^e"/>
+                </then>
+                <else>
+                    <if expression="e==0">
+                        <then>
+                            <assign variable="p" expression="1"/>
+                        </then>
+                        <else>
+                            <assign variable="p" expression="(1/b)^(0-e)"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Il risultato &#232; &quot; &amp; p" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

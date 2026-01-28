@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Es. 24 - Palestra"/>
+        <attribute name="authors" value="amird"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-27 04:33:09 "/>
+        <attribute name="created" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wMy0yNzsiMDQ6MTU6NDUgIjsyODI2"/>
+        <attribute name="edited" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wMy0yNzsiMDQ6MzM6MDkgIjsxOzI5MzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="F, S" type="Integer" array="False" size=""/>
+            <declare name="T" type="String" array="False" size=""/>
+            <output expression="&quot;Inserire il tipo di abbonamento:&quot;" newline="True"/>
+            <output expression="&quot;M = Mensile, T = Trimestrale&quot;" newline="True"/>
+            <input variable="T"/>
+            <output expression="&quot;Inserire la frequenza dell'abbonamento:&quot;" newline="True"/>
+            <output expression="&quot;1-3 giorni a settimana&quot;" newline="True"/>
+            <input variable="F"/>
+            <if expression="T=&quot;M&quot;">
+                <then>
+                    <assign variable="S" expression="100"/>
+                </then>
+                <else>
+                    <if expression="T=&quot;T&quot;">
+                        <then>
+                            <assign variable="S" expression="95"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;&#9888;&#65039; Errore nell'assegnazione del tipo di abbonamento.&quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="F&gt;3 or F&lt;1">
+                <then>
+                    <output expression="&quot;&#9888;&#65039; La frequenza data non &#232; valida.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Costo dell'abbonamento: &#8364;&quot; &amp; ((30+(20*F))*100)/S &amp; &quot;.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

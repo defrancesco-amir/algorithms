@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Somma infiniti numeri"/>
+        <attribute name="authors" value="studente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-17 09:30:01 "/>
+        <attribute name="created" value="c3R1ZGVudGU7TDIxN1BDMDc7MjAyNS0wMi0yODsiMTI6NTk6NTcgIjsyNTYx"/>
+        <attribute name="edited" value="c3R1ZGVudGU7TDIxN1BDMDc7MjAyNS0wMi0yODsiMDE6MzA6NDcgIjsxOzI2NTU="/>
+        <attribute name="edited" value="YW1pcmQ7VklDVFVTX0RJX0FNSVI7MjAyNS0wNC0xNzsiMDk6MzA6MDEgIjsxOzI5Mjg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, S, I" type="Integer" array="False" size=""/>
+            <assign variable="S" expression="0"/>
+            <assign variable="I" expression="0"/>
+            <output expression="&quot;Inserire tutti i numeri da sommare e scrivi 0 per confermare&quot;" newline="True"/>
+            <do expression="N!=0">
+                <assign variable="I" expression="I+1"/>
+                <output expression="&quot;Inserisci il &quot;&amp;I&amp;&quot;&#176; addendo&quot;" newline="True"/>
+                <input variable="N"/>
+                <assign variable="S" expression="S+N"/>
+            </do>
+            <output expression="&quot;Il risultato della somma dei &quot;&amp;I&amp;&quot; numeri &#232; &quot;&amp;S" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
