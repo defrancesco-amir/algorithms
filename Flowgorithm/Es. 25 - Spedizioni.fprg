@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Es. 25 - Spedizioni"/>
+        <attribute name="authors" value="studente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-28 01:37:31 "/>
+        <attribute name="created" value="c3R1ZGVudGU7TDIxN1BDMDc7MjAyNS0wMy0yODsiMTI6MzE6NDYgIjsyNTUw"/>
+        <attribute name="edited" value="c3R1ZGVudGU7TDIxN1BDMDc7MjAyNS0wMy0yODsiMDE6Mzc6MzEgIjsxOzI2NTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="T" type="String" array="False" size=""/>
+            <declare name="P, D" type="Real" array="False" size=""/>
+            <output expression="&quot;Inserire il tipo di pacco (N=Normale, U=Urgente)&quot;" newline="True"/>
+            <input variable="T"/>
+            <output expression="&quot;Inserire il peso del pacco (in kg)&quot;" newline="True"/>
+            <input variable="P"/>
+            <output expression="&quot;Inserire la distanza della destinazione (in km)&quot;" newline="True"/>
+            <input variable="D"/>
+            <if expression="D&gt;=0 and D&lt;=100">
+                <then>
+                    <if expression="T=&quot;N&quot;">
+                        <then>
+                            <output expression="&quot;La spedizione coster&#224; &#8364;&quot; &amp; 1*P" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="T=&quot;U&quot;">
+                                <then>
+                                    <output expression="&quot;La spedizione coster&#224; &#8364;&quot; &amp; 1.5*P" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;&#9888;&#65039; ERRORE NEL TIPO DEL PACCO INSERITO&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="D&gt;=101 and D&lt;=500">
+                        <then>
+                            <if expression="T=&quot;N&quot;">
+                                <then>
+                                    <output expression="&quot;La spedizione coster&#224; &#8364;&quot; &amp; 1.5*P" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="T=&quot;U&quot;">
+                                        <then>
+                                            <output expression="&quot;La spedizione coster&#224; &#8364;&quot; &amp; 2*P" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;&#9888;&#65039; ERRORE NEL TIPO DEL PACCO INSERITO&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="D&gt;=500">
+                                <then>
+                                    <if expression="T=&quot;N&quot;">
+                                        <then>
+                                            <output expression="&quot;La spedizione coster&#224; &#8364;&quot; &amp; 2*P" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="T=&quot;U&quot;">
+                                                <then>
+                                                    <output expression="&quot;La spedizione coster&#224; &#8364;&quot; &amp; 3*P" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;&#9888;&#65039; ERRORE NEL TIPO DEL PACCO INSERITO&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;&#9888;&#65039; ERRORE NELLA DISTANZA DEL PACCO INSERITA&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

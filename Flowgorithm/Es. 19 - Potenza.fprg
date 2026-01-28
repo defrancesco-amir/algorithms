@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Potenza"/>
+        <attribute name="authors" value="studente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-07 01:38:50 "/>
+        <attribute name="created" value="c3R1ZGVudGU7TDIxN1BDMDc7MjAyNS0wMy0wNzsiMDE6MzE6MTkgIjsyNTQ1"/>
+        <attribute name="edited" value="c3R1ZGVudGU7TDIxN1BDMDc7MjAyNS0wMy0wNzsiMDE6Mzg6NTAgIjsxOzI2NTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, y" type="Integer" array="False" size=""/>
+            <comment text="ciao! :D"/>
+            <input variable="x"/>
+            <input variable="y"/>
+            <assign variable="x" expression="x^y"/>
+            <output expression="x" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

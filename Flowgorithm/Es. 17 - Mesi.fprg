@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Mesi"/>
+        <attribute name="authors" value="studente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-14 12:49:09 "/>
+        <attribute name="created" value="c3R1ZGVudGU7TDIxN1BDMDc7MjAyNS0wMy0xNDsiMTI6MDc6MjkgIjsyNTQ5"/>
+        <attribute name="edited" value="c3R1ZGVudGU7TDIxN1BDMDc7MjAyNS0wMy0xNDsiMTI6NDk6MDkgIjsxOzI2NjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="X, i" type="Integer" array="False" size=""/>
+            <declare name="MESI" type="String" array="True" size="12"/>
+            <assign variable="MESI[1]" expression="&quot;Gennaio&quot;"/>
+            <input variable="x"/>
+            <if expression="x==11 or x==4 or x==6 or x==9">
+                <then>
+                    <output expression="&quot;Il mese ha 30 giorni&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="x=2">
+                        <then>
+                            <output expression="&quot;Il mese ha 28/29 giorni&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="x&gt;12 or x&lt;1">
+                                <then>
+                                    <output expression="&quot;Numero inserito non valido&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Il mese ha 31 giorni&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Pari o dispari"/>
+        <attribute name="authors" value="studente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-07 12:28:08 "/>
+        <attribute name="created" value="c3R1ZGVudGU7TDIxN1BDMDc7MjAyNS0wMy0wNzsiMTI6MDM6NTggIjsyNTQ5"/>
+        <attribute name="edited" value="c3R1ZGVudGU7TDIxN1BDMDc7MjAyNS0wMy0wNzsiMTI6Mjg6MDggIjsxOzI2NTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <input variable="x"/>
+            <if expression="x%2==0">
+                <then>
+                    <output expression="&quot;Pari&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Dispari&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
